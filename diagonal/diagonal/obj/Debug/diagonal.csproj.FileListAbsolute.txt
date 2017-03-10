@@ -1,0 +1,12 @@
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\diagonal\diagonal\bin\Debug\diagonal.exe.config
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\diagonal\diagonal\obj\Debug\diagonal.csprojResolveAssemblyReference.cache
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\diagonal\diagonal\bin\Debug\diagonal.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\diagonal\diagonal\bin\Debug\diagonal.pdb
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\diagonal\diagonal\obj\Debug\diagonal.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\diagonal\diagonal\obj\Debug\diagonal.pdb
+C:\Users\prathamesh.mashelkar\Documents\GitHub\c-sharp\diagonal\diagonal\bin\Debug\diagonal.exe.config
+C:\Users\prathamesh.mashelkar\Documents\GitHub\c-sharp\diagonal\diagonal\obj\Debug\diagonal.exe
+C:\Users\prathamesh.mashelkar\Documents\GitHub\c-sharp\diagonal\diagonal\obj\Debug\diagonal.pdb
+C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\diagonal\diagonal\bin\Debug\diagonal.exe.config
+C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\diagonal\diagonal\obj\Debug\diagonal.exe
+C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\diagonal\diagonal\obj\Debug\diagonal.pdb
