@@ -1,0 +1,6 @@
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\uinput\uinput\bin\Debug\uinput.exe.config
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\uinput\uinput\obj\Debug\uinput.csprojResolveAssemblyReference.cache
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\uinput\uinput\bin\Debug\uinput.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\uinput\uinput\bin\Debug\uinput.pdb
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\uinput\uinput\obj\Debug\uinput.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\uinput\uinput\obj\Debug\uinput.pdb

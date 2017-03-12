@@ -1,0 +1,6 @@
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\staircase\staircase\bin\Debug\staircase.exe.config
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\staircase\staircase\bin\Debug\staircase.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\staircase\staircase\bin\Debug\staircase.pdb
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\staircase\staircase\obj\Debug\staircase.csprojResolveAssemblyReference.cache
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\staircase\staircase\obj\Debug\staircase.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\staircase\staircase\obj\Debug\staircase.pdb

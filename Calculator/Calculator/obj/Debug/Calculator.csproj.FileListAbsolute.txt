@@ -1,0 +1,11 @@
+F:\Temp\learning\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\prathamesh.mashelkar\Downloads\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.MyCalculator.resources
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb

@@ -1,0 +1,6 @@
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\vowels\vowels\bin\Debug\vowels.exe.config
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\vowels\vowels\obj\Debug\vowels.csprojResolveAssemblyReference.cache
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\vowels\vowels\bin\Debug\vowels.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\vowels\vowels\bin\Debug\vowels.pdb
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\vowels\vowels\obj\Debug\vowels.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\vowels\vowels\obj\Debug\vowels.pdb

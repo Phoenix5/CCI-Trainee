@@ -1,0 +1,6 @@
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\equilibrium\equilibrium\bin\Debug\equilibrium.exe.config
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\equilibrium\equilibrium\bin\Debug\equilibrium.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\equilibrium\equilibrium\bin\Debug\equilibrium.pdb
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\equilibrium\equilibrium\obj\Debug\equilibrium.csprojResolveAssemblyReference.cache
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\equilibrium\equilibrium\obj\Debug\equilibrium.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\equilibrium\equilibrium\obj\Debug\equilibrium.pdb

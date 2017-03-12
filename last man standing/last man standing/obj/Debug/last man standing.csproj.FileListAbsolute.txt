@@ -1,0 +1,6 @@
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\last man standing\last man standing\bin\Debug\last man standing.exe.config
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\last man standing\last man standing\bin\Debug\last man standing.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\last man standing\last man standing\bin\Debug\last man standing.pdb
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\last man standing\last man standing\obj\Debug\last man standing.csprojResolveAssemblyReference.cache
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\last man standing\last man standing\obj\Debug\last man standing.exe
+c:\users\prathamesh.mashelkar\documents\visual studio 2015\Projects\last man standing\last man standing\obj\Debug\last man standing.pdb
