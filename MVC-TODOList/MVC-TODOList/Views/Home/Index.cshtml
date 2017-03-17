@@ -1,0 +1,37 @@
+﻿@model MVC_TODOList.Models.ToDoModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    @using (Html.BeginForm("AddItem", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.HiddenFor(m => m.DeleteKey)
+                @Html.TextBoxFor(m => m.Item, new { @class = "form-control" })
+            </div>
+            <input type="submit" class="btn btn-primary" value="Add" />
+        </div>
+
+        <div>
+            <h3>your to do list</h3>
+            <ul>
+                @foreach (KeyValuePair<int, string> description in MVC_TODOList.Models.ToDoModel.todos)
+                {
+                    <li>
+                        @Html.Label(description.Value)
+                        <input type="button" value="Remove" onclick="location.href='@Url.Action("RemoveItem", "Home", new { DeleteKey = @description.Key })'" />
+                        <input type="button" value="Edit" onclick="location.href='@Url.Action("EditItem", "Home", new { DeleteKey = @description.Key })'"/>
+                    </li>
+                }
+
+            </ul>
+
+        </div>
+
+    }
+
+</div>
