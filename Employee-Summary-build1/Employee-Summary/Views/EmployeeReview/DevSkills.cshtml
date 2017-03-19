@@ -1,0 +1,78 @@
+﻿@using Employee_Summary.Models
+@model Employee_Summary.Models.Summary
+
+@{
+    ViewBag.Title = "DevSkills";
+    Layout = "~/Views/EmployeeReview/layout/_Layout.cshtml";
+}
+
+<h2>DevSkills</h2>
+
+@Model.Id
+@Model.Name
+@Model.Designation
+@Model.set
+
+
+@Html.DisplayFor(model => model.Id)
+@Html.DisplayFor(model => model.Name)
+@Html.DisplayFor(model => model.Designation)
+@Html.DisplayFor(model => model.set)
+@Html.DisplayFor(model => model.Dskill.CodingSkills)
+@Html.DisplayFor(model => model.Dskill.QualityAssurance)
+@Html.DisplayFor(model => model.Dskill.TimeLogging)
+@Html.DisplayFor(model => model.Dskill.TroubleShootingSkills)
+@Html.DisplayFor(model => model.Tskill.AngularJS)
+@Html.DisplayFor(model => model.Tskill.ASPDotNETCORE)
+@Html.DisplayFor(model => model.Tskill.CSharp)
+@Html.DisplayFor(model => model.Tskill.GIT)
+@Html.DisplayFor(model => model.Tskill.Ruby)
+@Html.DisplayFor(model => model.Tskill.TFS)
+
+
+@using(Html.BeginForm("Category", "EmployeeReview", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group">
+
+        <div class="col-md-10">
+            @Html.LabelFor(model => model.Dskill.CodingSkills, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            @Html.DropDownListFor(model => model.Dskill.CodingSkills, new SelectList(Enum.GetValues(typeof(Dev_Rating))), "Select Designation")
+        </div>
+        <br />
+        <div class="col-md-10">
+            @Html.LabelFor(model => model.Dskill.QualityAssurance, htmlAttributes: new { @class = "control-label col-md-2" })
+        
+                @Html.DropDownListFor(model => model.Dskill.QualityAssurance, new SelectList(Enum.GetValues(typeof(Dev_Rating))), "Select Designation")
+            </div>
+            <br />
+            <div class="col-md-10">
+                @Html.LabelFor(model => model.Dskill.TimeLogging, htmlAttributes: new { @class = "control-label col-md-2" })
+                
+                    @Html.DropDownListFor(model => model.Dskill.TimeLogging, new SelectList(Enum.GetValues(typeof(Dev_Rating))), "Select Designation")
+                </div>
+                <br />
+                <div class="col-md-10">
+                    @Html.LabelFor(model => model.Dskill.TroubleShootingSkills, htmlAttributes: new { @class = "control-label col-md-2" })
+              
+                        @Html.DropDownListFor(model => model.Dskill.TroubleShootingSkills, new SelectList(Enum.GetValues(typeof(Dev_Rating))), "Select Designation")
+                    </div>
+
+                    @Html.HiddenFor(model => model.Id)
+                    @Html.HiddenFor(model => model.Name)
+                    @Html.HiddenFor(model => model.Designation)
+                    @Html.HiddenFor(model => model.set)
+                    <br>
+
+
+                    <br />
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Done" class="btn btn-default" />
+                    </div>
+                </div>
+
+
+}

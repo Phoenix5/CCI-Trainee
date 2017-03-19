@@ -1,0 +1,152 @@
+﻿@model Employee_Summary.Models.Summary
+
+@{
+    ViewBag.Title = "Summary";
+    Layout = "~/Views/EmployeeReview/layout/_Layout.cshtml";
+}
+
+<h2>Summary</h2>
+
+<div>
+    <h4>Employee Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+    </dl>
+
+</div>
+
+<div>
+    <h4>Development Skills</h4>
+    <hr />
+    <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Dskill.CodingSkills)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Dskill.CodingSkills)
+            </dd>
+
+        </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dskill.QualityAssurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dskill.QualityAssurance)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dskill.TimeLogging)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dskill.TimeLogging)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dskill.TroubleShootingSkills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dskill.TroubleShootingSkills)
+        </dd>
+
+    </dl>
+</div>
+
+
+
+<div>
+    <h4>Technical Skills</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tskill.AngularJS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tskill.AngularJS)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tskill.ASPDotNETCORE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tskill.ASPDotNETCORE)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tskill.CSharp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tskill.CSharp)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tskill.GIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tskill.GIT)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tskill.TFS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tskill.TFS)
+        </dd>
+
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tskill.Ruby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tskill.Ruby)
+        </dd>
+
+    </dl>
+
+</div>
+
+<p>
+    @Html.ActionLink("Log In", "Index")
+</p>
