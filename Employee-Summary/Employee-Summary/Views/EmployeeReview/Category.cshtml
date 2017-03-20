@@ -4,10 +4,7 @@
     ViewBag.Title = "Category";
     Layout = "~/Views/EmployeeReview/layout/_Layout.cshtml";
 }
-@Model.Id
-@Model.Name
-@Model.Designation
-@Model.set
+
 
 <h2>Category</h2>
 @Html.DisplayFor(model => model.Id)
@@ -33,8 +30,18 @@
 
 
     <div class="form-group">
-    @Html.HiddenFor(model => model.Name)
-    @Html.HiddenFor(model => model.Designation)
+        @Html.HiddenFor(model => model.Name)
+        @Html.HiddenFor(model => model.Designation)
+        @Html.HiddenFor(model => model.Dskill.CodingSkills)
+        @Html.HiddenFor(model => model.Dskill.QualityAssurance)
+        @Html.HiddenFor(model => model.Dskill.TimeLogging)
+        @Html.HiddenFor(model => model.Dskill.TroubleShootingSkills)
+        @Html.HiddenFor(model => model.Tskill.AngularJS)
+        @Html.HiddenFor(model => model.Tskill.ASPDotNETCORE)
+        @Html.HiddenFor(model => model.Tskill.CSharp)
+        @Html.HiddenFor(model => model.Tskill.GIT)
+        @Html.HiddenFor(model => model.Tskill.Ruby)
+        @Html.HiddenFor(model => model.Tskill.TFS)
         <div class="col-md-offset-2 col-md-10">
             <input type = "submit" value="DevSkill" class="btn btn-default" />
         </div>
@@ -48,6 +55,16 @@
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.Name)
     @Html.HiddenFor(model => model.Designation)
+    @Html.HiddenFor(model => model.Dskill.CodingSkills)
+    @Html.HiddenFor(model => model.Dskill.QualityAssurance)
+    @Html.HiddenFor(model => model.Dskill.TimeLogging)
+    @Html.HiddenFor(model => model.Dskill.TroubleShootingSkills)
+    @Html.HiddenFor(model => model.Tskill.AngularJS)
+    @Html.HiddenFor(model => model.Tskill.ASPDotNETCORE)
+    @Html.HiddenFor(model => model.Tskill.CSharp)
+    @Html.HiddenFor(model => model.Tskill.GIT)
+    @Html.HiddenFor(model => model.Tskill.Ruby)
+    @Html.HiddenFor(model => model.Tskill.TFS)
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="TechSkill" class="btn btn-default" />
