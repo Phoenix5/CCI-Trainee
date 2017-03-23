@@ -1,0 +1,52 @@
+﻿@model MVC_TODOList.Models.ToDoModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<br /><br />
+<div class="container" style="margin-top:30px;border:1px solid #d9cece;border-radius:20px;font-family:'Times New Roman', Times, serif;background-color:#0094ff">
+    <br />
+    @using (Html.BeginForm("AddItem", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="col-md-10 form-group-sm">
+                @Html.HiddenFor(m => m.DeleteKey)
+                @Html.TextBoxFor(m => m.Item, new { @class = "form-control" })
+            <input type="submit" class="btn btn-primary" value="Add" />
+        </div>
+
+        <div class="col-md-10">
+            <h3>your to do list</h3>
+            <ul class="list-group">
+                @foreach (var description in MVC_TODOList.Models.ToDoModel.todos)
+                {
+                    <li class="list-group-item">
+                        @Html.Label(description.TaskName,new { @class= "item" })
+                        <input type="button" value="Remove" class="btn btn-primary" onclick="location.href='@Url.Action("RemoveItem", "Home", new { DeleteKey = @description.Id})'" />
+                        <input type="button" value="Edit" class="btn btn-primary" onclick="location.href='@Url.Action("EditItem", "Home", new { DeleteKey = @description.Id})'"/>
+                    </li>
+                }
+
+            </ul>
+
+        </div>
+
+    }
+
+    @using (Ajax.BeginForm("SearchToDoList", "Home", new AjaxOptions
+    {
+        HttpMethod = "Post",
+        InsertionMode=InsertionMode.Replace,
+        UpdateTargetId="UpdateDiv"
+
+    }))
+    {
+            <div class="col-md-10" style="display:inline-block">
+              @*@Html.HiddenFor(m => m.DeleteKey)*@
+                @Html.TextBoxFor(m => m.Item, new { @class = "form-control" })
+                <input type="submit" class="btn btn-primary" value="Add" />
+            </div>
+           
+           
+        }
+    <div id="UpdateDiv" class="alert-info form-group col-lg-10"></div>
+</div>

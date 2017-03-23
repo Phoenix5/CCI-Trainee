@@ -1,0 +1,7 @@
+﻿@model MVC_TODOList.Models.ToDoModel
+@*Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")*@
+<div>
+    @if (@Model != null)
+{
+    <p><span class="item">Item:</span>@Model.Item<span class="item"> &nbsp;Is At Position:</span>@Model.DeleteKey</p>
+}</div>

@@ -100,6 +100,5 @@ C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Sum
 C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Summary\bin\System.Web.WebPages.Razor.xml
 C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Summary\bin\Antlr3.Runtime.pdb
 C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Summary\bin\Newtonsoft.Json.xml
-C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Summary\obj\Debug\Employee-Summary.csprojResolveAssemblyReference.cache
 C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Summary\obj\Debug\Employee-Summary.dll
 C:\Users\prathamesh.mashelkar\Documents\GitHub\prm\Employee-Summary\Employee-Summary\obj\Debug\Employee-Summary.pdb
