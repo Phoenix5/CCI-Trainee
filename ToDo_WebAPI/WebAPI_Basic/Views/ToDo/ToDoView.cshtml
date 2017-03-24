@@ -1,0 +1,151 @@
+﻿
+
+
+@{
+    ViewBag.Title = "CarStock";
+}
+
+<h2>CarStock</h2>
+
+@* <script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+<script lang="ja" type="text/javascript">
+
+    function GetTaskById()
+    {
+        $("#Cartbl2").empty();
+        var id =$("#idd").val();
+        $.ajax({
+            url: 'http://localhost:49407/api/ToDoAPI/' + id,
+            type: 'GET',
+            dataType: "json",
+            success: function (data) {
+
+                var datavalue = data;
+                var myJsonObject = datavalue;
+
+               
+                var TaskName = myJsonObject[0].TaskName;
+                var Id = myJsonObject[0].Id;
+
+                $('<tr><td>' +Id+'-'+ TaskName + '</td></tr>').appendTo('#Cartbl2');
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+
+    function AllTaskDetails()
+    {
+        $("#Cartbl1").empty();
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:49407/api/ToDoAPI", //URI  
+
+            dataType: "json",
+            success: function (data) {
+                debugger;
+                var /*data*/datavalue = data;
+                var myJsonObject = datavalue;
+                contentType: "application/json";
+                $.each(myJsonObject, function (i, mobj) {
+                    $("#Cartbl1").append('<tr><td width="50px">' + mobj.Id +'-'+mobj.TaskName + '</td></tr>');
+
+                });
+
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+
+    }
+
+    function PostData()
+    {
+        var task =
+{
+    TaskName: $("#iddd").val(),
+   
+};
+
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(task),
+            url: "http://localhost:49407/api/ToDoAPI",
+            dataType: "json",
+            contentType: "application/json",
+        });
+        window.setTimeout(AllTaskDetails(), 5000);
+    }
+
+    function PutData()
+    {
+       
+
+        var t = JSON.stringify($("#iddd").val());
+        var id = $("#idd").val();
+        $.ajax({
+            url: 'http://localhost:49407/api/ToDoAPI/' + id,
+            type: "put",
+            contentType: "application/json; charset=utf-8",
+            data: t,
+            dataType: "json",
+
+        });
+
+        window.setTimeout(AllTaskDetails(),5000);
+    }
+
+    function deleteData()
+    {
+        var id = $("#idd").val();
+        $.ajax({
+            url: 'http://localhost:49407/api/ToDoAPI/' + id,
+            type: 'DELETE',
+            success: function (data) {
+
+            },
+            error: function (data) {
+                alert('Problem in deleting car:' + data.responseText);
+            }
+        });
+        window.setTimeout(AllTaskDetails(), 50000);
+    }
+
+
+
+</script>
+
+
+@using (Html.BeginForm())
+{
+    <div style="text-align:center;">
+       
+       <table border="1" width="500" style="border-color:#ede8e8">
+           <tr>
+               <td>
+                   <input id="btnget" type="button" onclick="AllTaskDetails();" value="Get_Data" />
+
+               </td>
+           </tr>
+           <tr>
+           <td>
+               <b>Get Data</b>
+          </td>
+           </tr>
+       </table>
+
+        <table id="Cartbl1" border="1" width="500" style="border-color:#ede8e8">
+           
+       </table>
+        <table id="Cartbl2" border="1" width="500" style="border-color:#ede8e8"><tr>
+            <td>Get Data at:<input id="idd" type="number" />
+                <input id="iddd" type="text" />
+            <input id="btngetbyid" type="button" onclick="GetTaskById();" value="Get_BYID" />
+                <input id="btnpost" type="button" onclick="PostData();" value="Post_Data" />
+                <input id="btnput" type="button" onclick="PutData();" value="Put_Data" />
+                <input id="btnDelete" type="button" onclick="deleteData();" value="Delete" />
+            </td></tr></table>
+    </div>
+}
