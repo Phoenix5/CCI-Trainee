@@ -1,0 +1,159 @@
+﻿
+
+
+@{
+    ViewBag.Title = "ToDoList";
+}
+
+<h2>ToDo List</h2>
+
+@* <script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+<script lang="ja" type="text/javascript">
+
+    function GetTaskById()
+    {
+        $("#Cartbl1").empty();
+        var id =$("#idd2").val();
+        $.ajax({
+            url: 'http://localhost:49407/api/ToDoAPI/' + id,
+            type: 'GET',
+            dataType: "json",
+            success: function (data) {
+
+                var datavalue = data;
+                var myJsonObject = datavalue;
+
+               
+                var TaskName = myJsonObject[0].TaskName;
+                var Id = myJsonObject[0].Id;
+
+                $('<tr><td  width="50px">' + Id + '</td><td>' + TaskName + '</td> <td width="50px">   <input id="btnDelete" type="button" onclick="deleteData(' + Id + ');" value="Delete" /></td> <td width="50px">   <input  type="button" onclick="setId(' + Id + ',\' ' + TaskName + ' \');" value="Edit" /></td></tr>').appendTo('#Cartbl1');
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+
+    function AllTaskDetails()
+    {
+        $("#Cartbl1").empty();
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:49407/api/ToDoAPI", //URI  
+
+            dataType: "json",
+            success: function (data) {
+                debugger;
+                var /*data*/datavalue = data;
+                var myJsonObject = datavalue;
+                contentType: "application/json";
+                $.each(myJsonObject, function (i, mobj) {
+                    $("#Cartbl1").append('<tr><td >' + mobj.Id + '</td><td>' + mobj.TaskName + '</td> <td width="50px">   <input id="btnDelete" type="button" onclick="deleteData(' + mobj.Id + ');" value="Delete" /></td> <td width="50px">   <input  type="button" onclick="setId(' + mobj.Id + ',\' ' + mobj.TaskName + ' \');" value="Edit" /></td></tr>');
+
+                });
+
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+
+    }
+
+    function PostData()
+    {
+        var task =
+{
+    TaskName: $("#iddd").val(),
+   
+};
+
+        $.ajax({
+            type: "POST",
+            data: JSON.stringify(task),
+            url: "http://localhost:49407/api/ToDoAPI",
+            dataType: "json",
+            contentType: "application/json",
+            success: function (t) { AllTaskDetails(); }
+        });
+    }
+
+    function PutData()
+    {
+       
+
+        var t = JSON.stringify($("#iddd").val());
+        var id = $("#idd").val();
+        $.ajax({
+            url: 'http://localhost:49407/api/ToDoAPI/' + id,
+            type: "put",
+            contentType: "application/json; charset=utf-8",
+            data: t,
+            dataType: "json",
+            success: function (t) { AllTaskDetails(); }
+        });
+        $("#btnput").hide();
+        $("#btnpost").show();
+    }
+
+    function deleteData(id)
+    {
+      //  var id = $("#idd").val();
+        $.ajax({
+            url: 'http://localhost:49407/api/ToDoAPI/' + id,
+            type: 'DELETE',
+            success: function (data) {
+                AllTaskDetails(); 
+            },
+            error: function (data) {
+                alert('Problem in deleting :' + data.responseText);
+            }
+        });
+    }
+
+    function setId(id,id1) {
+      
+     // $('input[id=idd]').val(id);
+      $("#idd").val(id);
+      $("#iddd").val(id1);
+      $("#btnput").show();
+      $("#btnpost").hide();
+    }
+
+    
+    AllTaskDetails();
+
+</script>
+
+
+@using (Html.BeginForm())
+{
+    <div style="display:inline-block;">
+    <div style="text-align:center;display:inline-block;background-color:#ede8e8;padding:10px">
+       
+        <table border="1" width="500" style="border-color:#faf6f6;">
+           <tr><td>
+                    <input id="idd" type="hidden" value="" />
+                    Set To:<input id="iddd" type="text" value="" placeholder="Enter the Value to Add"/>
+                    <input id="btnpost" type="button" onclick="PostData();" value="Post Data" />
+                    <input id="btnput" type="button" onclick="PutData();" value="Put Data" style="display:none;"/>
+            </td></tr>
+           
+        </table>
+
+        
+   </div>
+<div style="text-align:center;background-color:#ede8e8;padding:10px">
+    <h1>TODO'S:</h1>
+    <table id="Cartbl1" border="1" width="500" style="border-color:#ede8e8"></table>
+    <table border="1" width="500" style="border-color:#faf6f6">
+        <tr><td>
+                Get at:<input id="idd2" type="number" value="" placeholder="Enter the Task Id To Search"/>
+                <input id="btngetbyid" type="button" onclick="GetTaskById();" value="Get BY ID" />
+                <input id="btnget" type="button" onclick="AllTaskDetails();" value="Refresh Data" />
+           </td></tr>
+    </table>
+</div>
+    </div>
+}
